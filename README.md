@@ -1,12 +1,12 @@
 # Olist E-Commerce Analysis
 
-An end-to-end exploratory and statistical analysis of the Olist Brazilian e-commerce dataset, focusing on customer satisfaction, order value, product categories, payment methods, and delivery performance.
+An end-to-end exploratory and statistical analysis of the Olist Brazilian e-commerce dataset, focusing on customer satisfaction, order value, delivery performance, product categories, and payment behavior.
 
 ## Project Overview
 
-The aim of this project is to explore the factors associated with customer satisfaction in an e-commerce marketplace and translate the analytical findings into meaningful business insights.
+The aim of this project is to explore factors associated with customer satisfaction in an e-commerce marketplace and translate analytical findings into meaningful business insights.
 
-The analysis combines descriptive statistics, data visualization, correlation analysis, and hypothesis testing to investigate customer experience from different perspectives.
+The analysis combines data preparation, exploratory data analysis, relationship analysis, statistical testing, visualization, and business interpretation to investigate customer experience from different perspectives.
 
 ## Business Questions
 
@@ -42,13 +42,13 @@ The analysis uses:
 | Products | 32,951 | 9 |
 | Sellers | 3,095 | 4 |
 
-The original data contains missing values in selected fields, particularly review comments, order delivery timestamps, and product attributes. Duplicate rows were not detected in the examined datasets.
+The data contains missing values in selected fields, particularly review comments, order delivery timestamps, and product attributes. No duplicate rows were detected in the examined datasets.
 
 ## Analytical Approach
 
 The project follows an end-to-end analytical workflow:
 
-**Data Preparation → Exploratory Data Analysis → Correlation Analysis → Hypothesis Testing → Visualization → Business Interpretation**
+**Data Preparation → Exploratory Data Analysis → Relationship Analysis → Statistical Testing → Visualization → Business Insights**
 
 ### 1. Data Preparation
 
@@ -72,19 +72,21 @@ The exploratory analysis covers:
 - Product category distribution
 - Customer review scores
 
-One notable finding is that approximately 90.1% of orders contain a single item. At the same time, average order value increases substantially as basket size grows, suggesting a potential opportunity to encourage customers to purchase complementary products.
+Approximately 90.1% of orders contain a single item. At the same time, average order value increases substantially as basket size grows, suggesting a potential opportunity to encourage customers to purchase complementary products.
 
-### 3. Correlation Analysis
+### 3. Relationship Analysis
 
-Relationships between key numerical and ordinal variables were examined, including:
+Relationships between key variables were examined using correlation analysis and group-based comparisons according to the characteristics of the variables.
 
-- Order price vs. delivery time
-- Order price vs. customer satisfaction
+The analysis includes:
+
+- Order value vs. delivery duration
+- Order value vs. customer satisfaction
 - Product category vs. customer satisfaction
 - Payment method vs. customer satisfaction
 - Delivery duration vs. customer satisfaction
 
-The analysis distinguishes between correlation and group-based comparisons depending on the type of variables being examined.
+For the relationship between delivery duration and customer satisfaction, a Spearman rank correlation was used to evaluate the association between the two variables.
 
 ### 4. Hypothesis Testing
 
@@ -116,7 +118,7 @@ However, the average review scores are relatively close, ranging from approximat
 
 A Spearman rank correlation test was used to examine the association between delivery duration and customer satisfaction.
 
-- **Correlation coefficient:** -0.235
+- **Correlation coefficient (ρ):** -0.235
 - **p-value:** < 0.001
 
 The result indicates a statistically significant negative association between delivery duration and customer satisfaction.
@@ -162,13 +164,13 @@ Potential extensions of this analysis include:
 
 ## Tools & Libraries
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Plotly
-- SciPy
-- Google Colab
+- **Python**
+- **Pandas** — Data loading, cleaning, transformation, and analysis
+- **NumPy** — Numerical computations
+- **Matplotlib** — Data visualization
+- **Plotly** — Interactive data visualization
+- **SciPy** — Statistical analysis and hypothesis testing
+- **Google Colab** — Development environment
 
 ## Project Structure
 
